@@ -5,7 +5,7 @@
 button {
   background-color: getColor(base, primary);
   border: none;
-  color: getColor(text, ui);
+  color: getColor(text, inverted);
   cursor: pointer;
   display: inline-block;
   line-height: unitSize(6);
@@ -32,7 +32,7 @@ button {
 
   &[disabled] {
     background-color: darken(getColor(background, light), 10%);
-    color: getColor(text, ui);
+    color: getColor(text, inverted);
     cursor: not-allowed;
   }
 }

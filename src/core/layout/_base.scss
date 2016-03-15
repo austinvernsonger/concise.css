@@ -278,7 +278,7 @@ textarea { resize: $textarea-resize; }
 // Specify the background color, font color, and drop shadow of text selections
 ::selection {
   background-color: getColor(state, selection); // required when declaring ::selection
-  color: getColor(text, ui);
+  color: getColor(text, inverted);
   text-shadow: none;
 }
 
