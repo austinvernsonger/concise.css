@@ -2,103 +2,101 @@
 // Base styles
 // =============================================================================
 
-
 //
 // Normalization
 // -------------
-// Courtesy of sanitize.css
-// (http://jonathantneal.github.io/sanitize.css/)
+// Courtesy of sanitize.css v3.3.0 - Modified for Concise Framework
+// (https://10up.github.io/sanitize.css/)
 
-:root {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  text-size-adjust: 100%;
+abbr[title] {
+  text-decoration: underline; // Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+
+  text-decoration: underline dotted; // Firefox 40+
 }
 
+// Chrome 44-, iOS 8+, Safari 9+
 audio:not([controls]) { display: none; }
 
+// Edge 12+, Safari 6.2+, and Chrome 18+
+b,
+strong { font-weight: bolder; }
+
+button {
+  -webkit-appearance: button; // iOS 8+
+  overflow: visible; // Internet Explorer 11-
+}
+
+button,
+input {
+  &::-moz-focus-inner {
+    border: 0; // Firefox 4+
+    padding: 0; // Firefox 4+
+  }
+
+  // Firefox 4+
+  &:-moz-focusring { outline: 1px dotted ButtonText; }
+}
+
+// Firefox 40+, Internet Explorer 11-
+button,
+select { text-transform: none; }
+
+// Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
 details { display: block; }
 
+// Internet Explorer 11-, Edge 12+
+hr { overflow: visible; }
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
+  overflow-y: scroll; // All browsers without overlaying scrollbars
+  -webkit-text-size-adjust: 100%; // iOS 8+, Windows Phone 8.1+
+}
+
 input {
+  // iOS 8+
+  -webkit-border-radius: 0;
+
+  // iOS 8+
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] { -webkit-appearance: button; }
+
+  // Firefox 36+
   &[type="number"] { width: auto; }
 
   &[type="search"] {
+    // Chrome 45+, Safari 9+
     -webkit-appearance: textfield;
 
+    // Chrome 45+, Safari 9+
     &::-webkit-search-cancel-button,
     &::-webkit-search-decoration { -webkit-appearance: none; }
   }
 }
 
-main,
-summary { display: block; }
+// Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
+main { display: block; }
 
+// Internet Explorer 11-
 pre { overflow: auto; }
 
+// Internet Explorer 11-, Windows Phone 8.1+
 progress { display: inline-block; }
 
+// Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+summary { display: block; }
+
+// Internet Explorer 11-
+svg:not(:root) { overflow: hidden; }
+
+// Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
+template { display: none; }
+
+// Edge 12+, Internet Explorer 11-
 textarea { overflow: auto; }
 
-template,
+// Internet Explorer 10-
 [hidden] { display: none; }
-
-[unselectable] { user-select: none }
-
-
-//
-// Universal Inheritance
-// ---------------------
-
-// Specify default styles in the document
-:root {
-  box-sizing: border-box;
-  color: getColor(text, primary);
-  cursor: default;
-  font-family: $font-family;
-  font-size: ($font-base-size * .875) + px;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
-  vertical-align: top;
-
-  @media (min-width: $bp-extra-small) {
-    font-size: $font-base-size + px;
-  }
-
-  @if $non-responsive == true {
-    .nonresponsive { font-size: $font-base-size + px; }
-  }
-}
-
-*,
-::after,
-::before {
-  box-sizing: inherit;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-* {
-  cursor: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-
-//
-// Misc
-// ----
-
-body { background-color: getColor(background, body); }
-
-a,
-button,
-input,
-select,
-textarea { cursor: initial; }
 
 // RTL and LTR language support
 *[dir="rl;"] {
@@ -113,25 +111,185 @@ bdo[dir="ltr"] { direction: ltr; }
 
 bdo[dir="rtl"] { direction: rtl; }
 
+/*
+ * Universal inheritance
+ */
+
+*,
+::before,
+::after { box-sizing: inherit; }
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+/*
+ * Opinionated defaults
+ */
+
+// Specify the margin and padding of all elements
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Specify the border style and width of all elements
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0;
+}
+
+// Remove the tapping delay from clickable elements
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] { touch-action: manipulation; }
+
+// Specify the standard appearance of selects
+select {
+  -moz-appearance: none;    // Firefox 40+
+  -webkit-appearance: none; // Chrome 45+
+
+  // Edge 12+, Internet Explorer 11-
+  &::-ms-expand { display: none; }
+
+  // Edge 12+, Internet Explorer 11-
+  &::-ms-value { color: currentColor; }
+}
+
+// Use current current as the default fill of svg elements
+svg { fill: currentColor; }
+
+// Specify the progress cursor of updating elements
+[aria-busy="true"] { cursor: progress; }
+
+// Specify the pointer cursor of trigger elements
+[aria-controls] { cursor: pointer; }
+
+// Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+[aria-disabled] { cursor: default; }
+
+// Specify the style of visually hidden yet accessible elements
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute;
+
+  &:focus { clip: auto; }
+}
+
+/*
+ * Configurable defaults
+ */
+
+// Specify the root styles of the document
+:root {
+  background-color: getColor(background, root);
+  box-sizing: $box-sizing;
+  color: getColor(text, base);
+  cursor: $default-cursor;
+  font: if(font-base-size == 16, 100%, pxToEm($font-base-size)) / #{$line-height} $font-family;
+
+  @media (max-width: $bp-extra-small) { font-size: 90%; }
+}
+
+// Specify the alignment of media elements
+audio,
+canvas,
+iframe,
+img,
+svg,
+video { vertical-align: middle; }
+
+// Specify the background color of form elements
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: getColor(text, secondary);
+}
+
+// Specify the minimum height of form elements
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea { min-height: unitSize(3); }
+
+// Specify the font family of code elements
+code,
+kbd,
+pre,
+samp { font-family: $font-family-mono; }
+
+// Specify the list style of nav lists
+nav ol,
+nav ul { list-style: none; }
+
+// Specify the font size of small elements
+small { font-size: $font-small-size; }
+
+// Specify the border styling of tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Specify the resizability of textareas
+textarea { resize: $textarea-resize; }
+
+// Specify the background color, font color, and drop shadow of text selections
+::selection {
+  background-color: getColor(state, selection); // required when declaring ::selection
+  color: getColor(text, ui);
+  text-shadow: none;
+}
+
 // Horizontal rule
 hr {
   border: 0;
-  border-top: 1px solid getColor(base, lines);
+  border-top: 1px solid getColor(base, border);
   display: block;
   height: 1px;
-  margin: unitSize(3, -4) 0;
+  margin: unitSize(2) 0;
 }
 
-// Figures
-figure { margin: unitSize(3) 1em; }
-
-figcaption {
-  color: getColor(text, secondary);
-  font-style: italic;
-  text-align: center;
-}
-
-// Selection
-::selection { background-color: getColor(base, selection); }
-
-::-moz-selection { background-color: getColor(base, selection); }
+// Figure captions
+figcaption { color: getColor(text, secondary); }

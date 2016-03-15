@@ -11,7 +11,13 @@ $font-family:          "Helvetica", "Arial", sans-serif !default;
 $font-family-headings: "Helvetica", "Arial", sans-serif !default;
 $font-family-print:    "Georgia", "Times New Roman", "Times", serif !default;
 $font-family-mono:     "Consolas", monospace !default;
-$font-base-size:       16 !default;
+
+// Font size
+$font-base-size: 16 !default;
+$font-small-size: 75%;
+
+// Line height
+$line-height: 1.5 !default;
 
 // Non-responsive website
 $non-responsive: true !default;
@@ -27,7 +33,7 @@ $bp-large:       70em !default;
 $bp-extra-large: 80em !default;
 
 // Base Size (used in unitSize() for proportions)
-$base-unit: 8;
+$base-unit: 8 !default;
 
 // Spacing
 $spacing-xs: unitSize(1) !default;
@@ -46,6 +52,15 @@ $h6-size: 14 !default;
 $giga-size: 80 !default;
 $mega-size: 64 !default;
 $kilo-size: 52 !default;
+
+// Default box sizing
+$box-sizing: border-box !default;
+
+// Default cursor
+$default-cursor: default !default;
+
+// Textarea resize
+$textarea-resize: vertical !default;
 
 //
 // Grid
@@ -76,7 +91,7 @@ $colors: (
   base: (
     "primary":   #4591aa,
     "selection": #d6d6d6,
-    "lines":     #e0e0e0
+    "border":     #e0e0e0
   ),
 
   text: (
@@ -89,7 +104,7 @@ $colors: (
   background: (
     "dark":  #282E31,
     "light": #f5f5f5,
-    "body":  white
+    "root":  white
   ),
 
   state: (
@@ -97,46 +112,8 @@ $colors: (
     "primary": #4591aa,
     "success": #45ca69,
     "warning": #ffb800,
-    "error":   #ca4829
-  ),
-
-  blue: (
-    "darker":  #495b61,
-    "dark":    #447281,
-    "base":    #4591aa,
-    "light":   #5ab0cc,
-    "lighter": #74cbe8
-  ),
-
-  green: (
-    "darker":  #3b6e6e,
-    "dark":    #3b8686,
-    "base":    #37a1a1,
-    "light":   #2dbaba,
-    "lighter": #69d1d1
-  ),
-
-  cream: (
-    "darker":  #c47858,
-    "dark":    #e29372,
-    "base":    #ecac91,
-    "light":   #f9c2ab,
-    "lighter": #fdd5c3
-  ),
-
-  red: (
-    "darker":  #653131,
-    "dark":    #b73333,
-    "base":    #da3c3c,
-    "light":   #f25a5a,
-    "lighter": #fa8181
-  ),
-
-  gray: (
-    "darker":  #333333,
-    "dark":    #4d4d4d,
-    "base":    #666666,
-    "light":   #808080,
-    "lighter": #999999
+    "error":   #ca4829,
+    "selection": #fce248
   )
 ) !default;
+
