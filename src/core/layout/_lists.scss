@@ -25,32 +25,6 @@ ol {
 
 
 //
-// Modifiers
-// ---------
-
-// Unstyled
-.list--unstyled {
-  list-style: none;
-  padding-left: 0;
-
-  li { padding-left: 0; }
-}
-
-// Inline
-.list--inline {
-  padding-left: 0;
-
-  li {
-    display: inline;
-    list-style: none;
-    padding-left: 1.5em;
-
-    &:first-child { padding-left: 0; }
-  }
-}
-
-
-//
 // Definition Lists
 // ----------------
 
@@ -60,46 +34,3 @@ dt { font-weight: bold; }
 
 dt,
 dd { margin-bottom: unitSize(1, 2); }
-
-// Horizontal definition list
-.dl--horizontal {
-  @media (min-width: $bp-medium) {
-    dt {
-      clear: left;
-      float: left;
-      overflow: hidden;
-      text-align: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 150px;
-    }
-
-    dd {
-      @include clearfix();
-
-      margin-left: 165px;
-    }
-  }
-}
-
-@if $non-responsive == true {
-  .nonresponsive {
-    .dl--horizontal {
-      dt {
-        clear: left;
-        float: left;
-        overflow: hidden;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 150px;
-      }
-
-      dd {
-        @include clearfix();
-
-        margin-left: 165px;
-      }
-    }
-  }
-}
