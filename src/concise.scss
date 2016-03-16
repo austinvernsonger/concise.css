@@ -13,10 +13,7 @@
 @import 'core/globals/functions';
 @import 'core/globals/mixins';
 
-// Custom globals
-@import 'custom/globals';
-
-// Natives
+// Base Styles
 @import 'core/layout/base';
 @import 'core/layout/blockquotes';
 @import 'core/layout/buttons';
@@ -26,9 +23,3 @@
 @import 'core/layout/print';
 @import 'core/layout/tables';
 @import 'core/layout/type';
-
-// Utils
-@import 'core/utils/atgrid';
-@import 'core/utils/colors';
-@import 'core/utils/conditional-styling';
-@import 'core/utils/helpers';
