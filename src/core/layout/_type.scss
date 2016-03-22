@@ -74,7 +74,7 @@ h1, h2, h3 {
 // -------------
 
 abbr[title] {
-  border-bottom: 1px dotted getColor(base, lines);
+  border-bottom: 1px dotted getColor(base, border);
   cursor: help;
 }
 
@@ -101,7 +101,7 @@ code {
 code,
 pre {
   background-color: getColor(background, light);
-  border: 1px solid getColor(base, lines);
+  border: 1px solid getColor(base, border);
   border-radius: 3px;
   color: darken(getColor(text, primary), 5%);
   margin-bottom: unitSize(3);
@@ -119,9 +119,9 @@ pre code {
 
 kbd {
   background-color: transparent;
-  border: 1px solid getColor(base, lines);
+  border: 1px solid getColor(base, border);
   border-radius: 3px;
-  box-shadow: 0 2px 0 -1px white,0 2px 0 darken(getColor(base, lines), 1.5%);
+  box-shadow: 0 2px 0 -1px white,0 2px 0 darken(getColor(base, border), 1.5%);
   display: inline-block;
   line-height: 1.75;
   margin: -3px 2px 0;

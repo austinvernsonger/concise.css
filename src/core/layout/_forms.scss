@@ -16,7 +16,7 @@ form [row] {
 input:not([type="submit"]),
 select,
 textarea {
-  border: 1px solid getColor(base, lines);
+  border: 1px solid getColor(base, border);
   border-radius: 3px;
   font-size: pxToEm(14);
   height: unitSize(4);
@@ -67,7 +67,7 @@ label {
 }
 
 fieldset {
-  border: 1px solid getColor(base, lines);
+  border: 1px solid getColor(base, border);
   border-radius: 3px;
   padding: unitSize(3) 1em;
   margin-bottom: unitSize(3);

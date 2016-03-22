@@ -71,7 +71,7 @@
   pre,
   code {
     background-color: transparent;
-    border: 1px solid getColor(base, lines);
+    border: 1px solid getColor(base, border);
     page-break-inside: avoid;
   }
 

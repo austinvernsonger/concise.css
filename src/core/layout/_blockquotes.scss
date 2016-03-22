@@ -3,7 +3,7 @@
 // =============================================================================
 
 blockquote {
-  border-left: 1px solid getColor(base, lines);
+  border-left: 1px solid getColor(base, border);
   color: getColor(text, secondary);
   margin-bottom: unitSize(3, -4);
   padding: 0 1em;
