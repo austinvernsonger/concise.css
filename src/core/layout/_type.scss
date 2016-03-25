@@ -83,13 +83,11 @@ abbr[title] {
 // Pre, Code, and User Input
 // -------------------------
 
+// Specify the font family of code elements
 code,
-pre,
 kbd,
-samp {
-  font-family: $font-family-mono;
-  font-size: $font-small-size;
-}
+pre,
+samp { font-family: $font-family-mono; }
 
 pre { padding: unitSize(2) 1.5em; }
 

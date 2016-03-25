@@ -23,7 +23,6 @@ ol {
  ul { list-style-type: square; }
 }
 
-
 //
 // Definition Lists
 // ----------------
@@ -34,3 +33,10 @@ dt { font-weight: bold; }
 
 dt,
 dd { margin-bottom: unitSize(1, 2); }
+
+//
+// Navigation Lists
+// ----------------
+
+nav ol,
+nav ul { list-style: none; }

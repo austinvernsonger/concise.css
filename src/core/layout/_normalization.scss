@@ -1,0 +1,136 @@
+//
+// Normalization
+// =============================================================================
+// Courtesy of sanitize.css - v3.3.0 - Modified for Concise Framework
+// (https://10up.github.io/sanitize.css/)
+
+abbr[title] {
+  text-decoration: underline; // Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+
+  text-decoration: underline dotted; // Firefox 40+
+}
+
+// Chrome 44-, iOS 8+, Safari 9+
+audio:not([controls]) { display: none; }
+
+// Edge 12+, Safari 6.2+, and Chrome 18+
+b,
+strong { font-weight: bolder; }
+
+button {
+  -webkit-appearance: button; // iOS 8+
+  overflow: visible; // Internet Explorer 11-
+}
+
+button,
+input {
+  &::-moz-focus-inner {
+    border: 0; // Firefox 4+
+    padding: 0; // Firefox 4+
+  }
+
+  // Firefox 4+
+  &:-moz-focusring { outline: 1px dotted ButtonText; }
+}
+
+// Firefox 40+, Internet Explorer 11-
+button,
+select { text-transform: none; }
+
+// Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+details { display: block; }
+
+// Internet Explorer 11-, Edge 12+
+hr { overflow: visible; }
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
+  overflow-y: scroll; // All browsers without overlaying scrollbars
+  -webkit-text-size-adjust: 100%; // iOS 8+, Windows Phone 8.1+
+}
+
+input {
+  // iOS 8+
+  -webkit-border-radius: 0;
+
+  // iOS 8+
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] { -webkit-appearance: button; }
+
+  // Firefox 36+
+  &[type="number"] { width: auto; }
+
+  &[type="search"] {
+    // Chrome 45+, Safari 9+
+    -webkit-appearance: textfield;
+
+    // Chrome 45+, Safari 9+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration { -webkit-appearance: none; }
+  }
+}
+
+// Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
+main { display: block; }
+
+// Internet Explorer 11-
+pre { overflow: auto; }
+
+// Internet Explorer 11-, Windows Phone 8.1+
+progress { display: inline-block; }
+
+// Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
+summary { display: block; }
+
+// Internet Explorer 11-
+svg:not(:root) { overflow: hidden; }
+
+// Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
+template { display: none; }
+
+// Edge 12+, Internet Explorer 11-
+textarea { overflow: auto; }
+
+// Internet Explorer 10-
+[hidden] { display: none; }
+
+// RTL and LTR language support
+*[dir="rl;"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+bdo[dir="ltr"],
+bdo[dir="rtl"] { unicode-bidi: bidi-override; }
+
+bdo[dir="ltr"] { direction: ltr; }
+
+bdo[dir="rtl"] { direction: rtl; }
+
+//
+// Universal inheritance
+//
+
+*,
+::before,
+::after { box-sizing: inherit; }
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}

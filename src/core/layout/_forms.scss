@@ -2,6 +2,24 @@
 // Forms
 // =============================================================================
 
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: getColor(text, secondary);
+}
+
+select {
+  -moz-appearance: none;    // Firefox 40+
+  -webkit-appearance: none; // Chrome 45+
+
+  // Edge 12+, Internet Explorer 11-
+  &::-ms-expand { display: none; }
+
+  // Edge 12+, Internet Explorer 11-
+  &::-ms-value { color: currentColor; }
+}
+
 form,
 form [row] {
   @media (min-width: $bp-extra-small) {
@@ -116,7 +134,7 @@ input[type="file"] {
 textarea {
   height: auto;
   padding: unitSize(1) 1em;
-  resize: vertical;
+  resize: $textarea-resize;;
 }
 
 // Style select like a standard input - Internet Explorer 11+
@@ -195,3 +213,21 @@ input[type="range"] {
     width: 16px;
   }
 }
+
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select { min-height: unitSize(3); }
