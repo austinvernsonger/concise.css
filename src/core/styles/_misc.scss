@@ -1,0 +1,32 @@
+//
+// Misc styles
+// =============================================================================
+
+// Remove the tapping delay from clickable elements
+a,
+area,
+button,
+input,
+label,
+select,
+textarea { touch-action: manipulation; }
+
+// Use current current as the default fill of svg elements
+svg { fill: currentColor; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video { vertical-align: middle; }
+
+hr {
+  border: 0;
+  border-top: 1px solid getColor(base, border);
+  display: block;
+  height: 1px;
+  margin: unitSize(2) 0;
+}
+
+figcaption { color: getColor(text, secondary); }

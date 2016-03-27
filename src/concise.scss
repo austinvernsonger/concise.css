@@ -10,18 +10,18 @@
  */
 
 // Globals
-@import 'core/globals/globals';
-@import 'core/globals/functions';
-@import 'core/globals/mixins';
+@import 'core/globals';
+@import 'core/functions';
+@import 'core/mixins';
 
 // Base Styles
-@import 'core/layout/normalization';
-@import 'core/layout/base';
-@import 'core/layout/blockquotes';
-@import 'core/layout/buttons';
-@import 'core/layout/forms';
-@import 'core/layout/headings';
-@import 'core/layout/lists';
-@import 'core/layout/print';
-@import 'core/layout/tables';
-@import 'core/layout/type';
+@import 'core/styles/normalization';
+@import 'core/styles/base';
+@import 'core/styles/blockquotes';
+@import 'core/styles/buttons';
+@import 'core/styles/forms';
+@import 'core/styles/headings';
+@import 'core/styles/lists';
+@import 'core/styles/print';
+@import 'core/styles/tables';
+@import 'core/styles/typography';

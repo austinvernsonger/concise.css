@@ -1,0 +1,31 @@
+//
+// Base styles
+// =============================================================================
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0;
+}
+
+:root {
+  background-color: getColor(background, root);
+  box-sizing: $box-sizing;
+  color: getColor(text, base);
+  cursor: $default-cursor;
+  font: if(font-base-size == 16, 100%, pxToEm($font-base-size)) / #{$line-height} $font-family;
+
+  @media (max-width: $bp-extra-small) { font-size: 90%; }
+}
+
+::selection {
+  background-color: getColor(state, selection); // required when declaring ::selection
+  color: getColor(text, inverted);
+  text-shadow: none;
+}
