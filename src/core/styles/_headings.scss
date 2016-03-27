@@ -60,17 +60,3 @@ h4 { font-size: pxToEm($h4-size); }
 h5 { font-size: pxToEm($h5-size); }
 
 h6 { font-size: pxToEm($h6-size); }
-
-//
-// Non-Responsive
-// --------------
-
-@if $non-responsive == true {
-  .nonresponsive {
-    h1 { font-size: pxToEm($h1-size); }
-
-    h2 { font-size: pxToEm($h2-size); }
-
-    h3 { font-size: pxToEm($h3-size); }
-  }
-}

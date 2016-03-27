@@ -45,6 +45,7 @@ table {
   tr,
   td { transition: background-color $transition-duration; }
 
+  // TODO: Check this
   @media (min-width: $bp-extra-small) {
     & {
       width: auto;
@@ -52,19 +53,5 @@ table {
       th,
       td { padding: 0 2.5em; }
     }
-  }
-}
-
-@if $non-responsive == true {
-  .nonresponsive {
-    & {
-      width: auto;
-
-      th,
-      td { padding: 0 2.5em; }
-    }
-
-    th,
-    td { line-height: unitSize(6); }
   }
 }

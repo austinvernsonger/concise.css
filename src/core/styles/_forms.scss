@@ -20,14 +20,8 @@ select {
   &::-ms-value { color: currentColor; }
 }
 
-form {
-  @media (min-width: $bp-extra-small) {
-    margin-bottom: unitSize(3);
-  }
-
-  @if $non-responsive == true {
-    .nonresponsive & { margin-bottom: unitSize(3); }
-  }
+@media (min-width: $bp-extra-small) {
+  form { margin-bottom: unitSize(3); }
 }
 
 input:not([type="submit"]),
@@ -55,7 +49,6 @@ textarea {
 }
 
 input:not([type="submit"]) {
-
   line-height: normal;
   min-height: unitSize(3);
 
