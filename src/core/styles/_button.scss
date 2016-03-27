@@ -10,9 +10,8 @@ button {
   display: inline-block;
   line-height: unitSize(6);
   overflow: visible;
-  padding: 0 2.5em;
+  padding: 0 2em;
   text-align: center;
-  text-decoration: none;
   transition: $transition-duration;
   user-select: none;
   vertical-align: middle;
@@ -20,8 +19,8 @@ button {
 
   &:hover,
   &:focus {
-    background-color: lighten(getColor(base, primary), 15%);
-    color: inherit;
+    background-color: getColor(base, secondary);
+    color: getColor(text, inverted);
     text-decoration: none;
   }
 
