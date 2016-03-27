@@ -24,8 +24,13 @@
   @media (max-width: $bp-extra-small) { font-size: 90%; }
 }
 
+::-moz-selection {
+  background-color: getColor(state, selection); // required when declaring ::selection
+  text-shadow: none;
+}
+
+
 ::selection {
   background-color: getColor(state, selection); // required when declaring ::selection
-  color: getColor(text, inverted);
   text-shadow: none;
 }
