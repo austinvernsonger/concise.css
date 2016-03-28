@@ -3,55 +3,10 @@
 // =============================================================================
 
 table {
-  border: 1px solid getColor(base, border);
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  margin-bottom: unitSize(3);
   width: 100%;
-
-  caption {
-    color: getColor(text, primary);
-    font-size: 85%;
-    font-style: italic;
-    line-height: unitSize(6);
-    text-align: center;
-  }
-
-  thead {
-    background-color: getColor(background, light);
-    text-align: left;
-  }
-
-  tfoot {
-    background-color: lighten(getColor(background, light), 2.5%);
-    border-top: 1px solid getColor(base, border);
-  }
-
-  th,
-  td {
-    border-right: 1px solid getColor(base, border);
-    line-height: unitSize(3);
-    overflow: visible;
-    padding: unitSize(1) 1em;
-
-    @media (min-width: $bp-extra-small) {
-      line-height: unitSize(6);
-    }
-
-    &:last-child { border-right: none; }
-  }
-
-  tr,
-  td { transition: background-color $transition-duration; }
-
-  // TODO: Check this
-  @media (min-width: $bp-extra-small) {
-    & {
-      width: auto;
-
-      th,
-      td { padding: 0 2.5em; }
-    }
-  }
 }
+
+thead { background-color: getColor(background, light); }

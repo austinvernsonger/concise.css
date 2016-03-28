@@ -1,39 +1,12 @@
 //
-// Type Styles
+// Typography
 // =============================================================================
 
-//
-// Defaults
-// --------
-
-small {
-  font-size: $font-small-size;
-  vertical-align: text-bottom;
-}
-
-sup,
-sub {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup { top: -0.5em; }
-
-sub { bottom: -0.25em; }
-
-s { text-decoration: line-through; }
-
-//
-// Paragraphs
-// --------
-
-p:not(:last-child) { margin-bottom: unitSize(3, -4); }
+p:not(:last-of-type) { margin-bottom: unitSize(3); }
 
 //
 // Links
-// -----
+// ----------------------------------------
 
 a {
   background-color: transparent;
@@ -43,24 +16,12 @@ a {
   transition: $transition-duration;
 
   &:hover,
-  &:focus { color: darken(getColor(base, primary), 15%); }
-}
-
-h1, h2, h3 {
-  a {
-    color: getColor(text, primary);
-
-    &:hover,
-    &:focus {
-      color: getColor(base, primary);
-      text-decoration: none;
-    }
-  }
+  &:focus { color: getColor(base, secondary); }
 }
 
 //
 // Abbreviations
-// -------------
+// ----------------------------------------
 
 abbr[title] {
   border-bottom: 1px dotted getColor(base, border);
@@ -68,79 +29,66 @@ abbr[title] {
 }
 
 //
-// Pre, Code, and User Input
-// -------------------------
+// Code and related
+// ----------------------------------------
 
-// Specify the font family of code elements
 code,
 kbd,
 pre,
-samp { font-family: $font-family-mono; }
-
-pre { padding: unitSize(2) 1.5em; }
-
-code {
-  vertical-align: middle;
-  white-space: nowrap;
+samp {
+  font-family: $font-family-mono;
+  background-color: getColor(background, light);
+  border: 1px solid getColor(base, border);
+  font-size: $font-small-size;
 }
 
 code,
-pre {
-  background-color: getColor(background, light);
-  border: 1px solid getColor(base, border);
-  border-radius: 3px;
-  color: darken(getColor(text, primary), 5%);
-  margin-bottom: unitSize(3);
-}
-
-code { padding: 2px 3px; }
+kbd { white-space: nowrap; }
 
 pre code {
   background-color: transparent;
   border: none;
-  padding: 0;
   vertical-align: inherit;
   white-space: pre;
+  font-size: inherit;
 }
 
 kbd {
-  background-color: transparent;
-  border: 1px solid getColor(base, border);
   border-radius: 3px;
-  box-shadow: 0 2px 0 -1px white,0 2px 0 darken(getColor(base, border), 1.5%);
-  display: inline-block;
-  line-height: 1.75;
-  margin: -3px 2px 0;
-  padding: 2px 6px 0;
-  white-space: nowrap;
+  background-color: getColor(background, root);
+  border: 1px solid getColor(base, border);
+  box-shadow: 0 2px 0 -1px white,
+              0 2px 0 darken(getColor(base, border), 1.5%);
+  color: getColor(text, secondary);
 }
-
-samp { vertical-align: bottom; }
-
-//
-// Addresses
-// ---------
-
-address { font-style: normal; }
 
 //
 // Blockquote
-// ----------
+// ----------------------------------------
 
 blockquote {
-  border-left: 1px solid getColor(base, border);
   color: getColor(text, secondary);
-  margin-bottom: unitSize(3, -4);
-  padding: 0 1em;
 
   cite,
   footer {
     display: block;
-    font-size: 80%;
+    font-size: $font-small-size;
     font-style: italic;
-    margin-top: unitSize(1, 2);
   }
 
   cite:before,
   footer:before { content: "\2014 \00A0"; }
 }
+
+//
+// Others
+// ----------------------------------------
+
+small,
+sup,
+sub { font-size: $font-small-size; }
+
+small { vertical-align: text-bottom; }
+
+sup,
+sub { line-height: 0; }

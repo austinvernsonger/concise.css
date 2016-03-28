@@ -20,15 +20,12 @@
   color: getColor(text, base);
   cursor: $default-cursor;
   font: if(font-base-size == 16, 100%, pxToEm($font-base-size)) / #{$line-height} $font-family;
-
-  @media (max-width: $bp-extra-small) { font-size: 90%; }
 }
 
 ::-moz-selection {
   background-color: getColor(state, selection); // required when declaring ::selection
   text-shadow: none;
 }
-
 
 ::selection {
   background-color: getColor(state, selection); // required when declaring ::selection

@@ -23,10 +23,9 @@ video { vertical-align: middle; }
 
 hr {
   border: 0;
-  border-top: 1px solid getColor(base, border);
+  background-color: getColor(base, border);
   display: block;
   height: 1px;
-  margin: unitSize(2) 0;
 }
 
 figcaption { color: getColor(text, secondary); }

@@ -6,32 +6,22 @@ button {
   background-color: getColor(base, primary);
   border: none;
   color: getColor(text, inverted);
-  cursor: pointer;
-  display: inline-block;
   line-height: unitSize(6);
-  overflow: visible;
   padding: 0 2em;
-  text-align: center;
   transition: $transition-duration;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     background-color: getColor(base, secondary);
     color: getColor(text, inverted);
-    text-decoration: none;
   }
 
-  &:focus,
-  &:active { outline: none; }
-
-  &:active { background-color: lighten(getColor(base, primary), 10%); }
+  &:active { background-color: lighten(getColor(base, secondary), 10%); }
 
   &[disabled] {
-    background-color: darken(getColor(background, light), 10%);
-    color: getColor(text, inverted);
+    background-color: getColor(base, border);
+    color: getColor(text, secondary);
     cursor: not-allowed;
   }
 }
