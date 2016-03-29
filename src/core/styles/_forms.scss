@@ -21,7 +21,7 @@ textarea {
   }
 
   &[disabled] {
-    background-color: getColor(background, light);
+    background-color: getColor(background, primary);
     cursor: not-allowed;
   }
 }
@@ -74,7 +74,7 @@ textarea {
   -webkit-appearance: none;
 
   &::-webkit-slider-runnable-track {
-    background-color: darken(getColor(background, light), 10%);
+    background-color: darken(getColor(background, primary), 10%);
     border: none;
     border-radius: 3px;
     height: 5px;
@@ -91,7 +91,7 @@ textarea {
   }
 
   &::-moz-range-track {
-    background-color: darken(getColor(background, light), 10%);
+    background-color: darken(getColor(background, primary), 10%);
     border: none;
     border-radius: 3px;
     height: 5px;
@@ -107,7 +107,7 @@ textarea {
   }
 
   &::-ms-track {
-    background-color: darken(getColor(background, light), 10%);
+    background-color: darken(getColor(background, primary), 10%);
     border: none;
     border-radius: 3px;
     color: transparent;

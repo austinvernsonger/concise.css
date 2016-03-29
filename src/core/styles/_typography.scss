@@ -37,7 +37,7 @@ kbd,
 pre,
 samp {
   font-family: $font-family-mono;
-  background-color: getColor(background, light);
+  background-color: getColor(background, primary);
   border: 1px solid getColor(base, border);
   font-size: $font-small-size;
 }

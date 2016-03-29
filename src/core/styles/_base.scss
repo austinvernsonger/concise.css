@@ -27,11 +27,11 @@
 }
 
 ::-moz-selection {
-  background-color: getColor(state, selection); // required when declaring ::selection
+  background-color: getColor(base, selection); // required when declaring ::selection
   text-shadow: none;
 }
 
 ::selection {
-  background-color: getColor(state, selection); // required when declaring ::selection
+  background-color: getColor(base, selection); // required when declaring ::selection
   text-shadow: none;
 }
