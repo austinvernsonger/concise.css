@@ -3,31 +3,9 @@
 // =============================================================================
 
 // !!Experimental!!
-address,
-article,
-aside,
-audio,
-blockquote,
-canvas,
-dd,
-div,
-dl,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-header,
-hr,
-ol,
-p,
-pre,
-section,
-table,
-table,
-tfoot,
-ul,
-video {
+address, article, aside, audio, blockquote, canvas, dd,
+div, dl, fieldset, figcaption, figure, footer, form, header,
+hr, ol, p, pre, section, table, table, tfoot, ul, video {
   &:not(:last-child) { margin-bottom: unitSize(3); }
 }
 
