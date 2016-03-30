@@ -2,7 +2,34 @@
 // Typography
 // =============================================================================
 
-p:not(:last-of-type) { margin-bottom: unitSize(3); }
+// !!Experimental!!
+address,
+article,
+aside,
+audio,
+blockquote,
+canvas,
+dd,
+div,
+dl,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hr,
+ol,
+p,
+pre,
+section,
+table,
+table,
+tfoot,
+ul,
+video {
+  &:not(:last-child) { margin-bottom: unitSize(3); }
+}
 
 //
 // Links
@@ -44,6 +71,8 @@ samp {
 
 code,
 kbd { white-space: nowrap; }
+
+pre { padding: unitSize(1) 1em; }
 
 pre code {
   background-color: transparent;
