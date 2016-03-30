@@ -19,7 +19,7 @@
   box-sizing: $box-sizing;
   color: getColor(text, base);
   cursor: $default-cursor;
-  font: if(font-base-size == 16, 100%, pxToEm($font-base-size)) / #{$line-height} $font-family;
+  font: if(font-base-size == 16, 100%, $font-base-size + px) / #{$line-height} $font-family;
 
   @media (max-width: $bp-extra-small) {
     font-size: 87.5%;
