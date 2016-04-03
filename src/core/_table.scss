@@ -9,4 +9,11 @@ table {
   width: 100%;
 }
 
-thead { background-color: getColor(background, primary); }
+th,
+td {
+  text-align: left;
+  padding: 0 0.5em;
+  line-height: unitSize(5);
+}
+
+th { background-color: getColor(background, primary); }
