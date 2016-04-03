@@ -1,0 +1,19 @@
+//
+// Spacing
+// =============================================================================
+
+// Default box sizing
+$box-sizing: border-box !default;
+
+// Base Size (used in unitSize() for proportions)
+$base-unit: 8 !default;
+
+// Spacing
+$spacing-xs: unitSize(1) !default;
+$spacing-s:  unitSize(2) !default;
+$spacing-m:  unitSize(3) !default;
+$spacing-l:  unitSize(4) !default;
+$spacing-xl: unitSize(5) !default;
+
+// Spacing for block elements
+$block-margin: unitSize(3) !default;

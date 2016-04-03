@@ -9,18 +9,16 @@
  * https://github.com/ConciseCSS/concise.css/blob/master/LICENSE
  */
 
-// Globals
-@import 'functions';
-@import 'globals';
-@import 'mixins';
+// Concise Interface
+@import 'interface';
 
 // Base Styles
-@import 'core/normalization';
-@import 'core/base';
-@import 'core/button';
-@import 'core/forms';
-@import 'core/headings';
-@import 'core/lists';
-@import 'core/table';
-@import 'core/typography';
-@import 'core/misc';
+@import 'styles/normalization';
+@import 'styles/base';
+@import 'styles/button';
+@import 'styles/forms';
+@import 'styles/headings';
+@import 'styles/lists';
+@import 'styles/table';
+@import 'styles/typography';
+@import 'styles/misc';
