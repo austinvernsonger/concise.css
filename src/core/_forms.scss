@@ -2,10 +2,6 @@
 // Forms
 // =============================================================================
 
-//
-// Base
-// ----------------------------------------
-
 input,
 select,
 textarea {
@@ -14,6 +10,7 @@ textarea {
   height: unitSize(5);
   transition: $transition-duration;
   width: 100%;
+  font-size: pxToEm($h6-size);
 
   &:focus {
     border-color: getColor(base, primary);
@@ -25,6 +22,32 @@ textarea {
     cursor: not-allowed;
   }
 }
+
+input,
+select { padding: 0 0.5em; }
+
+textarea {
+  height: auto;
+  resize: $textarea-resize;
+  padding: unitSize(1) 0.5em;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  & + label {
+    margin-left: 0.5em;
+    font-size: pxToEm($h6-size);
+  }
+}
+
+label { display: block; }
+
+fieldset {
+  border: 1px solid getColor(base, border);
+  padding: unitSize(2) 0.5em;
+}
+
+legend { font-weight: bold; }
 
 //
 // Inputs
@@ -65,16 +88,19 @@ textarea {
 
 [type="file"] { border: none; }
 
-[type="submit"] { @extend button; }
+[type="submit"] {
+  @extend button;
+  line-height: inherit;
+}
 
-// Range input TODO: Refactor
+// Range input
 [type="range"] {
   border: none;
   width: 100%;
   -webkit-appearance: none;
 
   &::-webkit-slider-runnable-track {
-    background-color: darken(getColor(background, primary), 10%);
+    background-color: getColor(background, primary);
     border: none;
     border-radius: 3px;
     height: 5px;
@@ -91,7 +117,7 @@ textarea {
   }
 
   &::-moz-range-track {
-    background-color: darken(getColor(background, primary), 10%);
+    background-color: getColor(background, primary);
     border: none;
     border-radius: 3px;
     height: 5px;
@@ -107,7 +133,7 @@ textarea {
   }
 
   &::-ms-track {
-    background-color: darken(getColor(background, primary), 10%);
+    background-color: getColor(background, primary);
     border: none;
     border-radius: 3px;
     color: transparent;
@@ -134,7 +160,13 @@ select {
   background-color: transparent;
 
   &[disabled] { color: getColor(text, secondary); }
-  &[multiple] { height: auto; }
+
+  &[multiple] {
+    height: auto;
+    padding: 0;
+
+    option { padding: unitSize(1) 0.5em; }
+  }
 
   // Edge 12+, Internet Explorer 11-
   &::-ms-expand { display: none; }
@@ -142,18 +174,3 @@ select {
   // Edge 12+, Internet Explorer 11-
   &::-ms-value { color: currentColor; }
 }
-
-//
-// Others
-// ----------------------------------------
-
-textarea {
-  height: auto;
-  resize: $textarea-resize;;
-}
-
-label { display: block; }
-
-fieldset { border: 1px solid getColor(base, border); }
-
-legend { font-weight: bold; }
