@@ -13,17 +13,26 @@
     <meta name="description" content="ConciseCSS Test File">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" media="all" href="../dist/concise.css">
+    <link rel="stylesheet" media="all" href="dist/concise.css">
 
     <style>
       body {
         max-width: 1000px;
         margin: 0 auto;
+        padding-bottom: 4em;
+        padding-top: 4em;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 2em;
       }
     </style>
   </head>
 
   <body>
+    <h1 class="title">ConciseCSS Test File</h1>
+
     <h1>Heading 1 <small><a href="#">Helper link</a></small></h1>
     <h2>Heading 2 <small>Helper text</small></h2>
     <h3>Heading 3 <small>Helper text</small></h3>
@@ -216,14 +225,6 @@
       <p>
         <input type="submit" value="Submit">
       </p>
-    </form>
-
-    <form>
-      <label for="username1">Username:</label>
-      <input type="text" placeholder="Username" id="username1">
-      <label for="password1">Password:</label>
-      <input id="password1" type="password" placeholder="Password">
-      <input class="button" type="submit" value="Login">
     </form>
   </body>
 </html>
