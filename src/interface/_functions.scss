@@ -22,7 +22,6 @@
   @return ($base-unit * $multiplier + $offset) / $font-base-size + rem;
 }
 
-
 //
 // pxToEm
 // ------
@@ -39,7 +38,6 @@
 @function pxToEm($px, $base: $font-base-size) {
   @return ($px / $base) + em;
 }
-
 
 //
 // getColor
