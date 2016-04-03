@@ -2,11 +2,11 @@
 // Typography
 // =============================================================================
 
-// !!Experimental!!
+// TODO: Experimental
 address, article, aside, audio, blockquote, canvas, dd,
 div, dl, fieldset, figcaption, figure, footer, form, header,
 hr, ol, p, pre, section, table, table, tfoot, ul, video {
-  &:not(:last-child) { margin-bottom: unitSize(3); }
+  &:not(:last-child) { margin-bottom: $block-margin; }
 }
 
 //
@@ -48,7 +48,11 @@ samp {
 }
 
 code,
-kbd { white-space: nowrap; }
+kbd {
+  white-space: nowrap;
+  padding: unitSize(0.5) 0.5em;
+  vertical-align: middle;
+}
 
 pre { padding: unitSize(1) 1em; }
 
@@ -75,6 +79,8 @@ kbd {
 
 blockquote {
   color: getColor(text, secondary);
+
+  p:last-of-type { margin-bottom: 0; }
 
   cite,
   footer {
