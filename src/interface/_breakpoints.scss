@@ -2,9 +2,8 @@
 // Breakpoints
 // =============================================================================
 
-// Breakpoints
-$bp-extra-small: 30em !default;
-$bp-small:       48em !default;
-$bp-medium:      60em !default;
-$bp-large:       70em !default;
-$bp-extra-large: 80em !default;
+$bp-extra-small: 480px !default;
+$bp-small:       768px !default;
+$bp-medium:      960px !default;
+$bp-large:       1120px !default;
+$bp-extra-large: 1280px !default;
